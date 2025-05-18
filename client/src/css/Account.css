@@ -1,0 +1,352 @@
+*{
+    font-family:"Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.profile{
+    padding-left: 20px;
+    font-size: 23px;
+
+}
+.profile{
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+input{
+    height: 40px;
+    padding-left: 10px;
+    max-width: 300px;
+}
+
+.account{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    padding: 50px 50px 250px 50px;
+    font-size: 20px;
+    width: 1400px;
+    gap: 70px;
+}
+.account > *{
+    width: 100%;
+}
+.table_title_and_button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/*.two_forms{*/
+/*    display: grid;*/
+/*    align-items: start;*/
+/*    justify-content: start;*/
+/*    gap: 20px;*/
+/*    grid-template-columns: auto auto;*/
+/*}*/
+
+.form{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-items: start;
+    justify-content: start;
+    gap: 3px;
+    font-size: 20px;
+    padding: 10px 10px 10px 50px;
+    width: fit-content; /* не растягиваться по ширине */
+}
+.form input{
+    max-width: 300px;
+    width: 100%;
+}
+.list_book{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    align-items: center;
+}
+.list_book button{
+    margin-top: 0;
+}
+.list_book input{
+    height: 40px;
+}
+.book_list_form{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    align-items: center;
+    max-width: 1500px;
+}
+
+.form h2{
+    margin-bottom: 10px;
+}
+input, select{
+    font-size: 20px;
+}
+select{
+    max-width: 200px;
+}
+#server_error, #server_message{
+    position: relative;
+    min-height: 80px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+}
+
+#server_message{
+    display:flex;
+    width: 260px;
+    background: rgba(166, 239, 167, 0.55);
+    border: 3px solid rgb(97, 255, 17);
+}
+
+#server_error{
+    display:flex;
+    flex-direction: column;
+    /* width: 260px; */
+    background: rgba(240, 168, 168, 0.55);
+    border: 3px solid rgba(240, 168, 168);
+    max-width: 260px;
+
+}
+
+
+.green_btn,
+.red_btn,
+.brown_btn
+{
+    font-weight: 500;
+    border: none;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 35px;
+    line-height: 15px;
+    white-space: nowrap;
+    padding: 0 15px 0 15px;
+    margin: 5px;
+    width: fit-content;
+}
+#plus_button{
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+
+.red_btn{
+    background-color: rgb(207, 19, 19);
+}
+
+.red_btn:hover{
+    background: rgb(255, 0, 0);
+    transform: scale(1.05);
+}
+
+.red_btn:active{
+    background: rgb(143, 14, 14);
+    transform: scale(0.95);
+}
+
+.green_btn
+{
+    background-color: rgb(0, 110, 0);
+}
+
+.green_btn:hover{
+    background: rgb(0, 151, 0);
+    transform: scale(1.05);
+}
+.green_btn:active{
+    background: rgb(0, 68, 0);
+    transform: scale(0.95);
+}
+
+.brown_btn
+{
+    background: rgb(114, 61, 13);
+}
+
+.brown_btn:hover{
+    background: rgb(142, 77, 19);
+    transform: scale(1.05);
+}
+
+.brown_btn:active{
+    background: rgb(46, 22, 5);
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+
+/* Основной стиль для таблицы */
+.table {
+    /*width: 100%;*/
+    border-collapse: collapse;
+    margin: 10px 0;
+    /* font-family: Arial, sans-serif; */
+
+}
+
+/* Оформление заголовков таблицы */
+.table thead {
+    /*background-color: rgb(0, 110, 0);*/
+    /*background: rgb(230, 255, 182);*/
+    background: #fff3cb;
+    /*color: white;*/
+    font-size: 18px;
+}
+
+/*!* Стиль для строк *!*/
+/*.table tbody tr:nth-child(odd) {*/
+/*    background-color: #e0e0e0; !*для нечетных строк *!*/
+/*}*/
+
+/*.table tbody tr:nth-child(even) {*/
+/*    background-color: #ffffff; !*для четных строк *!*/
+/*}*/
+
+/* Стиль для ячеек */
+.table td, .table th {
+    padding: 5px;
+    border: 1px solid #b0b0b0;
+    text-align: left;
+    font-size: 18px;
+
+}
+
+
+.table tr{
+    /*font-size: 22px;*/
+}
+/* Добавление стиля для строк при наведении */
+.table tbody tr:hover {
+    background-color: #c0c0c0;
+}
+@media screen and (max-width: 1800px){
+    .list_book input{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 1210px){
+    .two_forms{
+        width: 950px;
+    }
+    .account{
+        width: 800px;
+        padding-left: 20px;
+    }
+    .list_book{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 1000px){
+    .table th, .table td{
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    .table{
+        width: 800px;
+    }
+    .two_forms{
+        width: 750px;
+    }
+
+}
+@media screen and (max-width: 800px){
+
+    .two_forms{
+        grid-template-columns: 1fr;
+    }
+    .account{
+        width: 640px;
+
+    }
+    .table{
+        width: 640px;
+    }
+    .form > *{
+        width: 600px;
+    }
+}
+@media screen and (max-width: 640px){
+    .account{
+        width: 400px;
+    }
+    .table{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 540px){
+    .account{
+        padding-left: 5px;
+        width: 400px;
+    }
+    .table{
+        width: 400px;
+    }
+
+    .green_btn, .red_btn, .brown_btn{
+        font-size: 10px;
+        padding: 3px;
+        height: 22px;
+    }
+    #plus_button{
+        font-size: 15px;
+    }
+    th, td, .account, input, select, h2, h1, p{
+        font-size: 10px !important;
+    }
+    select{
+        width: 150px;
+    }
+    input, select{
+        padding: 3px;
+    }
+    form > div{
+        padding: 3px;
+    }
+    input, select{
+        height: 20px !important;
+    }
+
+}
+@media screen and (max-width: 400px){
+    .table, .account {
+        width: 350px;
+        padding: 3px;
+    }
+    .account > div{
+        width: 270px;
+    }
+
+}
+@media screen and (max-width: 300px){
+    .account{
+        padding-left: 20px;
+        width: 400px;
+    }
+
+}

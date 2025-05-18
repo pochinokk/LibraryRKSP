@@ -1,0 +1,250 @@
+header *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+  margin:0;
+  padding:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    /* background: rgb(32, 166, 14); */
+    /* background: rgb(21, 107, 10); */
+    /*background: rgb(25, 129, 12);*/
+    background: rgb(114, 61, 13);
+    /* background: rgb(15, 72, 7); */
+    /* background: rgb(39,27,41); */
+    position: sticky;
+    top:0;
+    z-index: 200;
+    overflow: hidden;
+}
+
+/*Логотип в хедере*/
+.header_logo{
+  position: fixed;
+  left: 20px;
+  top: 8px;
+}
+/*Название в хедере*/
+.header_name{
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color:white;
+  position: fixed;
+  left: 85px;
+  white-space: nowrap;
+  padding-top: 0;
+  line-height: 80px;
+}
+/*Ссылки в хедере*/
+.header_links{
+  float: right;
+  margin-right: 15px;
+
+}
+
+.header_links li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 2px;
+}
+.header_links a{
+  color: white;
+  font-weight: 500;
+  padding: 7px 15px;
+  font-size: 17px;
+  transition: all 0.6s ease;
+}
+
+
+
+.current{
+  border-bottom: 2px solid white;
+}
+.header_links .link:hover{
+    cursor: pointer;
+  color: white;
+  border-radius: 4px;
+  /*background:rgb(0, 93, 12);*/
+  background: rgb(255, 151, 40);
+}
+
+.header_links .link:visited {
+  color: white;
+}
+
+.header_links .link:active {
+  color: white;
+
+}
+#user_name{
+  border-radius: 4px;
+  /*background:rgb(0, 93, 12);*/
+    background: #ffebd2;
+    color: black;
+}
+
+
+#burger_user_name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 4px;
+  padding: 15px 0 15px 0;
+}
+#burger_user_name p{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.navbar{
+    width: 300px;
+    height: 100%;
+    background-color: rgb(42, 42, 42);
+    position: fixed;
+    top: 0;
+    left: -301px;
+    display: none;
+    justify-content: center;
+    align-items: start;
+    padding-top: 65px;
+    z-index: 100;
+    transition: left .5s cubic-bezier(1, 0, 0, 1);
+}
+
+.change{
+    left: 0;
+}
+.burger-menu{
+    width: 40px;
+    height: 38px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1000;
+    display: none;
+}
+.line{
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.change .line-1 {
+    transform: rotateZ(-135deg) translate(-8px, -10px);
+    background-color: white;
+}
+.change .line-2 {
+    opacity: 0;
+}
+.change .line-3 {
+    transform: rotateZ(135deg) translate(-8px, 10px);
+    background-color: white;
+}
+
+.nav-list {
+    text-align: left;
+}
+
+.nav-item{
+    list-style: none;
+    margin: 25px;
+}
+
+
+.nav-link{
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    font-family: "Dosis", sans-serif;
+    /* text-transform: uppercase; */
+    position: relative;
+    padding: 3px 0;
+}
+
+.nav-link::before,
+.nav-link::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background:rgb(164, 255, 16);
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.nav-link::after{
+    bottom: 0;
+    transform-origin: right;
+}
+.nav-link::before{
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+
+@media screen and (max-width: 1290px)
+  {
+      .header_links a{
+      padding: 7px 8px;
+    }
+  }
+@media screen and (max-width: 1190px)
+{
+  .header_links a{
+    padding: 7px 2px;
+  }
+}
+@media screen and (max-width: 1125px)
+{
+  .header_logo{
+    left:70px;
+  }
+  .header_name{
+    left:135px;
+  }
+  .header_links{
+    display: none;
+  }
+  .burger-menu{
+    display: flex;
+  }
+  #user_name{
+    display: none;
+  }
+  .navbar{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 456px)
+{
+  .shopping-cart,
+  .notification
+  {
+    display: none;
+  }
+}

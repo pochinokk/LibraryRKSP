@@ -1,0 +1,65 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarion</title>
+    <link rel="icon" href="/images/icons/favicon.ico" sizes = "any">
+    <link rel="stylesheet" href="/css/registration_style.css">
+    <link rel="stylesheet" href="/css/header_style.css">
+    <link rel="stylesheet" href="/css/footer_style.css">
+    <script src = "/js/burger.js" defer></script>
+</head>
+<body> 
+    <main>
+        <div class="container">
+            {{#if mes}}
+                <div id="server_message">
+                    <p>{{mes}}</p>
+                </div>
+            {{/if}}
+
+            {{#if er}}
+                <div class="server_error">
+                    <p>{{er}}</p>
+                </div>
+            {{/if}}
+
+            {{#if validationErrors}}
+                <div class="server_error">
+                    {{#each validationErrors}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
+            {{/if}}
+            <div class = "header_tittle" >АВТОРИЗАЦИОННЫЙ СЕРВЕР</div>
+            <div class="form-box">
+                <form class = "reg_form" action="/auth/v1/register" method="post">
+                    <h2 class = "word_registr">Регистрация</h2>
+                    <div class="inputbox">
+                        <input type="text" name="username" required>
+                        <label for="">Логин</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="full_name" required>
+                        <label for="">Полное имя</label>
+                    </div>
+                    <div class="inputbox inputbox2">
+                        <input type="password" name="password" required>
+                        <label for="">Пароль</label>
+                    </div>
+                    <div class="inputbox inputbox3">
+                        <input type="tel" name="phone">
+                        <label for="">Телефон</label>
+                    </div>
+                    <div class="inputbox inputbox3">
+                        <input type="text" name="address">
+                        <label for="">Адрес</label>
+                    </div>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    <div class="overlay">
+    </div>
+    </main>
+</body>

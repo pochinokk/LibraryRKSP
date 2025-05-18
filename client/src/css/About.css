@@ -1,0 +1,123 @@
+*{
+    font-family:"Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about{
+    height: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about_us_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 1000px;
+    height: 600px;
+    margin-top: 300px;
+    margin-bottom: 200px;;
+}
+.text_about_us{
+    padding: 10px;
+    padding-top: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+}
+.text_about_us p{
+    margin: 0px;
+    white-space: nowrap;
+}
+.logo_container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.logo_container img{
+    animation: logo_levitation 5s infinite ease-in-out;
+}
+
+.logo_name{
+    font-size: 45px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.map_container{
+    margin-top: 30px;
+    margin-bottom: 200px;
+}
+
+.map_title{
+    font-size: 30px;
+    padding: 0px 10px 0px 10px;
+}
+.map_title p{
+    font-size: 30px;
+    margin: 0px;
+}
+
+@keyframes logo_levitation {
+    0% { transform: translateY(0px); }
+    50% {transform: translateY(-30px); }
+    100% { transform: translateY(0px); }
+}
+
+@media screen and (max-width: 1020px){
+    .about_us_wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 670px){
+    .our_location{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 536px){
+    .about_us_wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+    .text_about_us p{
+        font-size: 22px;
+    }
+    .logo{
+        width: 200px;
+    }
+    .logo_name{
+        font-size: 35px;
+    }
+    .our_location{
+        width: 360px;
+    }
+    .map_title p{
+        font-size: 21px;
+    }
+
+    @keyframes logo_levitation {
+        0% { transform: translateY(0px); }
+        50% {transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+}
+@media screen and (max-width: 450px){
+
+    .our_location{
+        width: 340px;
+    }
+}

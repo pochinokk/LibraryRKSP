@@ -1,0 +1,52 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarion</title>
+    <link rel="icon" href="/images/icons/favicon.ico" sizes = "any">
+    <link rel="stylesheet" href="/css/authentication_style.css">
+    <link rel="stylesheet" href="/css/header_style.css">
+    <link rel="stylesheet" href="/css/footer_style.css">
+    <script src = "/js/burger.js" defer></script>
+</head>
+<body> 
+    <main>
+        <div class="container">
+            {{#if mes}}
+                <div id="server_message">
+                    <p>{{mes}}</p>
+                </div>
+            {{/if}}
+            {{#if er}}
+                <div id="server_error">
+                    <p>{{er}}</p>
+                </div>
+            {{/if}}
+            <div class = "header_tittle" >АВТОРИЗАЦИОННЫЙ СЕРВЕР</div>
+            <div class = "form-box">
+                <div class = "form-value">
+                    <form action="/auth/v1/authenticate" method="post">
+                        <h2 class = "word_auth">Вход</h2>
+                        <div class="inputbox">
+                            <!-- <img class = "mail" src="/images/icons/white_mail.png" alt="" width="23"> -->
+                            <input type="text" name="username" required>
+                            <label for="">Имя</label>
+                        </div>
+                        <div class="inputbox inputbox2">
+                            <!-- <img class="lock" src="/images/icons/white_lock_bold.png" alt="" width="27"> -->
+                            <input type="password" name="password" required>
+                            <label for="">Пароль</label>
+                        </div>
+                        <button type="submit">Войти</button>
+                        <div class="register">
+                            <p><a href="/auth/v1/registration">Регистрация</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <div class="overlay">
+    </div>
+    </main>
+</body>

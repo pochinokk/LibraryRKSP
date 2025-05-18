@@ -1,0 +1,46 @@
+
+
+<header>
+    <a href="/home">
+        <img class = "header_logo" src="/images/icons/logo512.png" alt="Логотип" title="Логотип" width = "64" height="64">
+    </a>
+    <label class="header_name">Librarion</label>
+
+    <ul class = "header_links">
+
+        {{#if isAuthentication}}
+            <li ><a class = "current link" href="/auth/v1/authentication" >Войти</a></li>
+        {{else}}
+            <li ><a class = "link" href="/auth/v1/authentication" >Войти</a></li>
+        {{/if}}
+
+        {{#if isRegistration}}
+            <li ><a class = "current link" href="/auth/v1/registration" >Регистрация</a></li>
+        {{else}}
+            <li ><a class = "link" href="/auth/v1/registration" >Регистрация</a></li>
+        {{/if}}
+
+
+
+    </ul>
+    <div class = "burger-background"></div>
+    <div class = "navbar">
+
+        <div class = "burger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+
+
+        <ul class = "nav-list">
+            <div class = "space_for_x"></div>
+            <li class="nav-item"><a href="/auth/v1/authentication" class = "nav-link">Войти</a></li>
+            <li class="nav-item"><a href="/auth/v1/registration" class = "nav-link">Регистрация</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+
