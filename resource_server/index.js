@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3002;
 
 const app = express();
 
-//МОЖНО ПОТОМ УБРАТЬ ниже
+
 const cors = require("cors");
 
 app.use(
@@ -23,7 +23,7 @@ app.use(
         allowedHeaders: ["Content-Type", "Authorization"],
     })
 );
-//МОЖНО ПОТОМ УБРАТЬ выше
+
 
 
 app.use(express.urlencoded({extended: true}));
